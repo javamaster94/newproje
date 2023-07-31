@@ -4,15 +4,15 @@ import { useNavigation } from "@react-navigation/native";
 import Ionicons from "react-native-vector-icons/Ionicons"
 
 
-function HomeScreen() {
+function SearchScreen() {
 
     const navigation = useNavigation();
 
     return (
-      <View style={{ flex:1, alignItems: 'center', justifyContent: 'center',backgroundColor:"coral"}}>
+      <View style={{ flex:1, alignItems: 'center', justifyContent: 'center',backgroundColor:"lightblue"}}>
 
-        <Text>HomeScreen</Text>
-        <Ionicons name="hand-right" color={"white"} size={250} />
+        <Text>SearchScreen</Text>
+        <Ionicons name="hand-right" color={"green"} size={250} />
         
 
 
@@ -23,4 +23,4 @@ function HomeScreen() {
   
 
 
-  export default HomeScreen;
+  export default SearchScreen;
