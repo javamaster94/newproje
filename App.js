@@ -8,6 +8,7 @@ import HomeScreen from './src/pages/HomeScreen';
 import ProfileScreen from './src/pages/ProfileScreen';
 import SearchScreen from './src/pages/SearchScreen';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import SettingsScreen from './src/pages/SettingsScreen';
 
 
 const Stack = createNativeStackNavigator();
@@ -26,21 +27,27 @@ const App = () => {
               <Tab.Screen name="Home" options={{
           tabBarLabel: 'Home',
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="home" color={color} size={size} />
+            <MaterialCommunityIcons name="home" color={"tomato"} size={size} />
           ),
         }} component={HomeScreen} />
               <Tab.Screen name="Search" options={{
           tabBarLabel: 'Home',
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="magnify" color={color} size={size} />
+            <MaterialCommunityIcons name="magnify" color={"tomato"} size={size} />
           ),
         }}  component={SearchScreen} />
               <Tab.Screen name="Profile" options={{
           tabBarLabel: 'Home',
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="account-circle" color={color} size={size} />
+            <MaterialCommunityIcons name="account-circle" color={"tomato"} size={size} />
           ),
         }} component={ProfileScreen} />
+        <Tab.Screen name="Settings" options={{
+          tabBarLabel: 'Settings',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="cog" color={"tomato"} size={size} />
+          ),
+        }} component={SettingsScreen} />
             </Tab.Navigator>
           )}
         </Stack.Screen>
