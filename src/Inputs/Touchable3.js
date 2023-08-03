@@ -6,7 +6,7 @@ export default function Touchable3() {
     const navigation = useNavigation(); 
   return (
     <TouchableOpacity style={{ width: 200, height: 50,  borderColor: "darkblue", padding: 10 }}>
-          <Text style={{left:85,color:"red"}}>
+          <Text style={{left:80,color:"red"}}>
             
             Kullanım Şartları
           </Text>
