@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Image} from 'react-native';
+import {View, Image, Alert} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
 import Inputs from '../Inputs/Inputs';
@@ -8,7 +8,6 @@ import Touchable from '../Inputs/Touchable';
 import Touchable2 from '../Inputs/Touchable2';
 import Touchable3 from '../Inputs/Touchable3';
 import Touchable4 from '../Inputs/Touchable4';
-import HomeScreen from './HomeScreen';
 
 const logoImg = require('../assets/logo2.png');
 
@@ -18,12 +17,10 @@ function LoginScreen() {
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
-    console.log('Kullanıcı adı:', user);
-    console.log('Şifre:', password);
-    if (user === 'eminex' && password === '1234') {
+    if (user === '' && password === '') {
       navigation.navigate('HomeScreen');
     } else {
-      alert('Kullanıcı Adı veya Şifre yanlış,lütfen tekrar deneyiniz...');
+      Alert.alert('Kullanıcı Adı veya Şifre yanlış,lütfen tekrar deneyiniz...');
       setUser('');
       setPassword('');
     }
